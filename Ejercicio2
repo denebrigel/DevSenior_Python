@@ -1,0 +1,26 @@
+"""
+Diseña un programa que permita calcular el minimo comun multiplo (MCM)
+de dos numeros enteros positivos mediante sumas sucesivas
+"""
+def calcularmcm(num1,num2):
+	if num1<=0 or num2 <=0:
+		return("Los numeros deben ser Positivos")
+		
+	suma1= num1
+	suma2= num2
+	
+	while suma1 != suma2:
+		if suma1 < suma2:
+			suma1 += num1
+		else:
+			suma2 +=num2
+	return suma1 
+	
+	
+
+num1 = int(input("Por favor Ingrese el primer numero a buscar el MCM: "))
+num2 = int(input("Por favor Ingrese el segundo numero a buscar el MCM: "))
+
+resultado = calcularmcm (num1,num2)
+
+print(f"El Minimo Comun multiplo de {num1} y {num2} es {resultado}")
